@@ -37,6 +37,8 @@ def encode(num, base):
     remainder_str = ""
     while num is not 0:
         remainder = num%base
+        if remainder > 9:
+            remainder = chr(remainder + 87)
         remainder_array.append(str(remainder))
         num = num/base
 
