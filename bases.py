@@ -36,6 +36,10 @@ def encode(num, base):
     remainder_array = []
     remainder_str = ""
     while num is not 0:
+        remainder = num%base
+        remainder_array.append(str(remainder))
+        num = num/base
+    print remainder_array
 
 def convert(str_num, base1, base2):
     """
