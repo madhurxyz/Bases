@@ -17,6 +17,7 @@ def decode(str_num, base):
         if str_num[i].isdigit():
             int_num = int(str_num[i])
         if not str_num[i].isdigit():
+            int_num = ord(str_num[i]) - 87
         conversion = base**(length - i - 1)
         decode_num = int_num*conversion
         decode_sum += decode_num
@@ -32,6 +33,9 @@ def encode(num, base):
     """
     assert 2 <= base <= 36
 
+    remainder_array = []
+    remainder_str = ""
+    while num is not 0:
 
 def convert(str_num, base1, base2):
     """
