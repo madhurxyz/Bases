@@ -10,6 +10,16 @@ def decode(str_num, base):
     base -- base of given number
     """
     assert 2 <= base <= 36
+    
+    length = len(str_num)
+    decode_sum = 0
+    for i in range(0,length):
+        int_num = int(str_num[i])
+        conversion = base**(length - i - 1)
+        decode_num = int_num*conversion
+        decode_sum += decode_num
+
+    return decode_sum
 
 
 def encode(num, base):
@@ -20,14 +30,6 @@ def encode(num, base):
     """
     assert 2 <= base <= 36
 
-    length = len(str_num)
-    decode_sum = 0
-    for i in range(0,length):
-        int_num = int(str_num[i])
-        conversion = base**(length - i - 1)
-        decode_num = int_num*conversion
-
-    return decode_num
 
 def convert(str_num, base1, base2):
     """
