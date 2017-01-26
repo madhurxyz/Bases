@@ -20,6 +20,9 @@ def encode(num, base):
     """
     assert 2 <= base <= 36
 
+    length = len(str_num)
+    decode_sum = 0
+    for i in range(0,length):
 
 def convert(str_num, base1, base2):
     """
