@@ -10,11 +10,13 @@ def decode(str_num, base):
     base -- base of given number
     """
     assert 2 <= base <= 36
-    
+
     length = len(str_num)
     decode_sum = 0
     for i in range(0,length):
-        int_num = int(str_num[i])
+        if str_num[i].isdigit():
+            int_num = int(str_num[i])
+        if not str_num[i].isdigit():
         conversion = base**(length - i - 1)
         decode_num = int_num*conversion
         decode_sum += decode_num
