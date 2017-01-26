@@ -39,7 +39,13 @@ def encode(num, base):
         remainder = num%base
         remainder_array.append(str(remainder))
         num = num/base
-    print remainder_array
+
+    reversed_remainder_array = remainder_array[::-1]
+    for i in range(0, len(reversed_remainder_array)):
+        remainder_str += reversed_remainder_array[i]
+
+    e = remainder_str
+    return e
 
 def convert(str_num, base1, base2):
     """
