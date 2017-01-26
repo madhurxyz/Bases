@@ -23,6 +23,11 @@ def encode(num, base):
     length = len(str_num)
     decode_sum = 0
     for i in range(0,length):
+        int_num = int(str_num[i])
+        conversion = base**(length - i - 1)
+        decode_num = int_num*conversion
+
+    return decode_num
 
 def convert(str_num, base1, base2):
     """
