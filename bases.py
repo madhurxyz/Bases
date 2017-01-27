@@ -11,18 +11,24 @@ def decode(str_num, base):
     """
     assert 2 <= base <= 36
 
+    # length = len(str_num)
+    # decode_sum = 0
+    # for i in range(0,length):
+    #     if str_num[i].isdigit():
+    #         int_num = int(str_num[i])
+    #     if not str_num[i].isdigit():
+    #         int_num = ord(str_num[i]) - 87
+    #     conversion = base**(length - i - 1)
+    #     decode_num = int_num*conversion
+    #     decode_sum += decode_num
+    #
+    # return decode_sum
+
     length = len(str_num)
     decode_sum = 0
-    for i in range(0,length):
-        if str_num[i].isdigit():
-            int_num = int(str_num[i])
-        if not str_num[i].isdigit():
-            int_num = ord(str_num[i]) - 87
-        conversion = base**(length - i - 1)
-        decode_num = int_num*conversion
-        decode_sum += decode_num
+    for i in range(base-1,0):
+        
 
-    return decode_sum
 
 
 def encode(num, base):
