@@ -31,7 +31,7 @@ def decode(str_num, base):
             int_num = int(str_num[i])
         if not str_num[i].isdigit():
             int_num = ord(str_num[i])-87
-        converstion = (int_num)*base
+        converstion = base**(length - i - 1)
 
 
 
