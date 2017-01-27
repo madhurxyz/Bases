@@ -26,8 +26,13 @@ def decode(str_num, base):
 
     length = len(str_num)
     decode_sum = 0
-    for i in range(base-1,0):
-        
+    for i in range(0,length):
+        if str_num[i].isdigit():
+            int_num = int(str_num[i])
+        if not str_num[i].isdigit():
+            int_num = ord(str_num[i])-87
+        converstion = (int_num)*base
+
 
 
 
